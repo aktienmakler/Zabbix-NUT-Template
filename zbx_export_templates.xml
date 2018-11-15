@@ -11,6 +11,7 @@
         <template>
             <template>Template_NUT_UPS</template>
             <name>Template NUT UPS</name>
+	    <description/>
             <groups>
                 <group>
                     <name>UPS</name>
@@ -48,7 +49,11 @@
                     <publickey/>
                     <privatekey/>
                     <port/>
-                    <filter>:</filter>
+                    <filter>
+			<evaltype>0</evaltype>
+			<formula/>
+			<conditions/>
+		    </filter>
                     <lifetime>30</lifetime>
                     <description/>
                     <item_prototypes>
@@ -87,11 +92,17 @@
                             <port/>
                             <description/>
                             <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>UPS</name>
-                                </application>
-                            </applications>
+<logtimefmt/>
+<applications>
+	<application>
+		<name>UPS</name>
+	</application>
+</applications>
+<application_prototypes>
+	<application_prototype>
+		<name>UPS</name>
+	</application_prototype>
+</application_prototypes>
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
@@ -129,11 +140,17 @@
                             <port/>
                             <description/>
                             <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>UPS</name>
-                                </application>
-                            </applications>
+<logtimefmt/>
+<applications>
+	<application>
+		<name>UPS</name>
+	</application>
+</applications>
+<application_prototypes>
+	<application_prototype>
+		<name>UPS</name>
+	</application_prototype>
+</application_prototypes>
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
@@ -171,11 +188,17 @@
                             <port/>
                             <description/>
                             <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>UPS</name>
-                                </application>
-                            </applications>
+<logtimefmt/>
+<applications>
+	<application>
+		<name>UPS</name>
+	</application>
+</applications>
+<application_prototypes>
+	<application_prototype>
+		<name>UPS</name>
+	</application_prototype>
+</application_prototypes>
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
@@ -213,11 +236,17 @@
                             <port/>
                             <description/>
                             <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>UPS</name>
-                                </application>
-                            </applications>
+<logtimefmt/>
+<applications>
+	<application>
+		<name>UPS</name>
+	</application>
+</applications>
+<application_prototypes>
+	<application_prototype>
+		<name>UPS</name>
+	</application_prototype>
+</application_prototypes>
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
@@ -255,11 +284,17 @@
                             <port/>
                             <description/>
                             <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>UPS</name>
-                                </application>
-                            </applications>
+<logtimefmt/>
+<applications>
+	<application>
+		<name>UPS</name>
+	</application>
+</applications>
+<application_prototypes>
+	<application_prototype>
+		<name>UPS</name>
+	</application_prototype>
+</application_prototypes>
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
@@ -297,11 +332,17 @@
                             <port/>
                             <description/>
                             <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>UPS</name>
-                                </application>
-                            </applications>
+<logtimefmt/>
+<applications>
+	<application>
+		<name>UPS</name>
+	</application>
+</applications>
+<application_prototypes>
+	<application_prototype>
+		<name>UPS</name>
+	</application_prototype>
+</application_prototypes>
                             <valuemap/>
                         </item_prototype>
                         <item_prototype>
@@ -339,11 +380,17 @@
                             <port/>
                             <description/>
                             <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>UPS</name>
-                                </application>
-                            </applications>
+<logtimefmt/>
+<applications>
+	<application>
+		<name>UPS</name>
+	</application>
+</applications>
+<application_prototypes>
+	<application_prototype>
+		<name>UPS</name>
+	</application_prototype>
+</application_prototypes>
                             <valuemap>
                                 <name>UPS Battery Status</name>
                             </valuemap>
@@ -383,17 +430,23 @@
                             <port/>
                             <description/>
                             <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>UPS</name>
-                                </application>
-                            </applications>
+<logtimefmt/>
+<applications>
+	<application>
+		<name>UPS</name>
+	</application>
+</applications>
+<application_prototypes>
+	<application_prototype>
+		<name>UPS</name>
+	</application_prototype>
+</application_prototypes>
                             <valuemap/>
                         </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{UPS:upsmon[{#UPSNAME},battery.charge].last(0)}&lt;40</expression>
+                            <expression>{Template_NUT_UPS:upsmon[{#UPSNAME},battery.charge].last(0)}&lt;40</expression>
                             <name>UPS {#UPSNAME} Charge &lt; 40%</name>
                             <url/>
                             <status>0</status>
@@ -402,7 +455,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{UPS:upsmon[{#UPSNAME},battery.charge].last(0)}&lt;90</expression>
+                            <expression>{Template_NUT_UPS:upsmon[{#UPSNAME},battery.charge].last(0)}&lt;90</expression>
                             <name>UPS {#UPSNAME} Charge &lt; 90%</name>
                             <url/>
                             <status>0</status>
@@ -411,7 +464,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{UPS:upsmon[{#UPSNAME},ups.status].last(0)}=5</expression>
+                            <expression>{Template_NUT_UPS:upsmon[{#UPSNAME},ups.status].last(0)}=5</expression>
                             <name>UPS {#UPSNAME} Status - Battery is charging</name>
                             <url/>
                             <status>0</status>
@@ -420,7 +473,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{UPS:upsmon[{#UPSNAME},ups.status].last(0)}=11</expression>
+                            <expression>{Template_NUT_UPS:upsmon[{#UPSNAME},ups.status].last(0)}=11</expression>
                             <name>UPS {#UPSNAME} Status - Boosting incoming voltage</name>
                             <url/>
                             <status>0</status>
@@ -429,7 +482,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{UPS:upsmon[{#UPSNAME},ups.status].last(0)}=7</expression>
+                            <expression>{Template_NUT_UPS:upsmon[{#UPSNAME},ups.status].last(0)}=7</expression>
                             <name>UPS {#UPSNAME} Status - Bypass</name>
                             <url/>
                             <status>0</status>
@@ -438,7 +491,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{UPS:upsmon[{#UPSNAME},ups.status].last(0)}=8</expression>
+                            <expression>{Template_NUT_UPS:upsmon[{#UPSNAME},ups.status].last(0)}=8</expression>
                             <name>UPS {#UPSNAME} Status - Calibration</name>
                             <url/>
                             <status>0</status>
@@ -447,7 +500,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{UPS:upsmon[{#UPSNAME},ups.status].last(0)}=3</expression>
+                            <expression>{Template_NUT_UPS:upsmon[{#UPSNAME},ups.status].last(0)}=3</expression>
                             <name>UPS {#UPSNAME} Status - Low battery</name>
                             <url/>
                             <status>0</status>
@@ -456,7 +509,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{UPS:upsmon[{#UPSNAME},ups.status].last(0)}=9</expression>
+                            <expression>{Template_NUT_UPS:upsmon[{#UPSNAME},ups.status].last(0)}=9</expression>
                             <name>UPS {#UPSNAME} Status - Offline</name>
                             <url/>
                             <status>0</status>
@@ -465,7 +518,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{UPS:upsmon[{#UPSNAME},ups.status].last(0)}=2</expression>
+                            <expression>{Template_NUT_UPS:upsmon[{#UPSNAME},ups.status].last(0)}=2</expression>
                             <name>UPS {#UPSNAME} Status - On battery</name>
                             <url/>
                             <status>0</status>
@@ -474,7 +527,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{UPS:upsmon[{#UPSNAME},ups.status].last(0)}=10</expression>
+                            <expression>{Template_NUT_UPS:upsmon[{#UPSNAME},ups.status].last(0)}=10</expression>
                             <name>UPS {#UPSNAME} Status - Overloaded</name>
                             <url/>
                             <status>0</status>
@@ -483,7 +536,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{UPS:upsmon[{#UPSNAME},ups.status].last(0)}=11</expression>
+                            <expression>{Template_NUT_UPS:upsmon[{#UPSNAME},ups.status].last(0)}=11</expression>
                             <name>UPS {#UPSNAME} Status - Trimming incoming voltage</name>
                             <url/>
                             <status>0</status>
@@ -492,7 +545,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{UPS:upsmon[{#UPSNAME},ups.status].last(0)}=0</expression>
+                            <expression>{Template_NUT_UPS:upsmon[{#UPSNAME},ups.status].last(0)}=0</expression>
                             <name>UPS {#UPSNAME} Status - Unknown state</name>
                             <url/>
                             <status>0</status>
@@ -501,7 +554,7 @@
                             <type>0</type>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{UPS:upsmon[{#UPSNAME},ups.temperature].last(0)}&gt;28</expression>
+                            <expression>{Template_NUT_UPS:upsmon[{#UPSNAME},ups.temperature].last(0)}&gt;28</expression>
                             <name>UPS {#UPSNAME} Temperature</name>
                             <url/>
                             <status>0</status>
@@ -537,7 +590,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>UPS</host>
+                                        <host>Template_NUT_UPS</host>
                                         <key>upsmon[{#UPSNAME},battery.charge]</key>
                                     </item>
                                 </graph_item>
@@ -569,7 +622,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>UPS</host>
+                                        <host>Template_NUT_UPS</host>
                                         <key>upsmon[{#UPSNAME},input.frequency]</key>
                                     </item>
                                 </graph_item>
@@ -601,7 +654,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>UPS</host>
+                                        <host>Template_NUT_UPS</host>
                                         <key>upsmon[{#UPSNAME},ups.load]</key>
                                     </item>
                                 </graph_item>
@@ -633,7 +686,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>UPS</host>
+                                        <host>Template_NUT_UPS</host>
                                         <key>upsmon[{#UPSNAME},ups.temperature]</key>
                                     </item>
                                 </graph_item>
@@ -665,7 +718,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>UPS</host>
+                                        <host>Template_NUT_UPS</host>
                                         <key>upsmon[{#UPSNAME},input.voltage]</key>
                                     </item>
                                 </graph_item>
@@ -677,7 +730,7 @@
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
-                                        <host>UPS</host>
+                                        <host>Template_NUT_UPS</host>
                                         <key>upsmon[{#UPSNAME},output.voltage]</key>
                                     </item>
                                 </graph_item>
@@ -694,7 +747,7 @@
     </templates>
     <value_maps>
         <value_map>
-            <name>Service state</name>
+            <name>UPS Battery Status</name>
             <mappings>
 <mapping><value>0</value><newvalue>unknown state</newvalue></mapping>
 <mapping><value>1</value><newvalue>On line (mains is present)</newvalue></mapping>
@@ -703,11 +756,11 @@
 <mapping><value>4</value><newvalue>The battery needs to be replaced</newvalue></mapping>
 <mapping><value>5</value><newvalue>The battery is charging</newvalue></mapping>
 <mapping><value>6</value><newvalue>The battery is discharging (inverter is providing load power)</newvalue></mapping>
-<mapping><value>7</value><newvalue>UPS bypass circuit is active echo no battery protection is available</newvalue></mapping>
-<mapping><value>8</value><newvalue>UPS is currently performing runtime calibration (on battery)</newvalue></mapping>
-<mapping><value>9</value><newvalue>UPS is offline and is not supplying power to the load</newvalue></mapping>
+<mapping><value>7</value><newvalue>UPS bypass active, no battery available</newvalue></mapping>
+<mapping><value>8</value><newvalue>UPS performing runtime calibration (on battery)</newvalue></mapping>
+<mapping><value>9</value><newvalue>UPS offline, not supplying power to the load</newvalue></mapping>
 <mapping><value>10</value><newvalue>UPS is overloaded</newvalue></mapping>
-<mapping><value>11</value><newvalue>UPS is trimming incoming voltage (called "buck" in some hardware)</newvalue></mapping>
+<mapping><value>11</value><newvalue>UPS trimming incoming voltage</newvalue></mapping>
 <mapping><value>12</value><newvalue>UPS is boosting incoming voltage</newvalue></mapping>
             </mappings>
         </value_map>
