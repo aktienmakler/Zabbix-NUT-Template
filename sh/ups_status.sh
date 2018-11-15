@@ -2,7 +2,7 @@
  
 ups=$1
 
-if [ $ups = ups.discovery ]; then
+if [ "$ups" = "ups.discovery" ]; then
 
     echo -e "{\n\t\"data\":["
     first=1
@@ -18,7 +18,7 @@ if [ $ups = ups.discovery ]; then
 else
 key=$2
 
-if [ $key = ups.status ]; then
+if [ "$key" = "ups.status" ]; then
 	state=`/bin/upsc $ups $key 2>&1 | grep -v SSL`
 	case $state in
 		OL)		echo 1 ;; #'On line (mains is present)' ;;
