@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
-    <version>2.0</version>
-    <date>2014-07-01T09:43:44Z</date>
+    <version>3.0</version>
+    <date>2018-11-15T22:00:00Z</date>
     <groups>
         <group>
             <name>UPS</name>
@@ -9,8 +9,8 @@
     </groups>
     <templates>
         <template>
-            <template>UPS</template>
-            <name>UPS</name>
+            <template>Template_NUT_UPS</template>
+            <name>Template NUT UPS</name>
             <groups>
                 <group>
                     <name>UPS</name>
@@ -692,4 +692,24 @@
             <screens/>
         </template>
     </templates>
+    <value_maps>
+        <value_map>
+            <name>Service state</name>
+            <mappings>
+<mapping><value>0</value><newvalue>unknown state</newvalue></mapping>
+<mapping><value>1</value><newvalue>On line (mains is present)</newvalue></mapping>
+<mapping><value>2</value><newvalue>On battery (mains is not present)</newvalue></mapping>
+<mapping><value>3</value><newvalue>Low battery</newvalue></mapping>
+<mapping><value>4</value><newvalue>The battery needs to be replaced</newvalue></mapping>
+<mapping><value>5</value><newvalue>The battery is charging</newvalue></mapping>
+<mapping><value>6</value><newvalue>The battery is discharging (inverter is providing load power)</newvalue></mapping>
+<mapping><value>7</value><newvalue>UPS bypass circuit is active echo no battery protection is available</newvalue></mapping>
+<mapping><value>8</value><newvalue>UPS is currently performing runtime calibration (on battery)</newvalue></mapping>
+<mapping><value>9</value><newvalue>UPS is offline and is not supplying power to the load</newvalue></mapping>
+<mapping><value>10</value><newvalue>UPS is overloaded</newvalue></mapping>
+<mapping><value>11</value><newvalue>UPS is trimming incoming voltage (called "buck" in some hardware)</newvalue></mapping>
+<mapping><value>12</value><newvalue>UPS is boosting incoming voltage</newvalue></mapping>
+            </mappings>
+        </value_map>
+    </value_maps>
 </zabbix_export>
